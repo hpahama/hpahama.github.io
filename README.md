@@ -9,8 +9,8 @@
             font-family: 'Press Start 2P', cursive;
             background-color: #f0f0f0;
             color: #333;
-            margin: 0; /* Added margin reset */
-            padding: 0; /* Added padding reset */
+            margin: 0;
+            padding: 0;
         }
 
         header {
@@ -22,7 +22,7 @@
         nav ul {
             list-style-type: none;
             padding: 0;
-            margin: 0; /* Added margin reset */
+            margin: 0;
         }
 
         nav ul li {
@@ -35,24 +35,21 @@
             color: #fff;
         }
 
-        /* Styling for subheaders */
         section h2 {
-            color: #ff0080; /* Darker pink color */
-            font-family: "Courier New", Courier, monospace; /* Typewriter font */
+            color: #ff0080;
+            font-family: "Courier New", Courier, monospace;
         }
         
-        /* Simplified Header Styling */
         h1 {
-            font-size: calc(24px + (24px / 3)); /* 1/3 bigger font size */
+            font-size: calc(24px + (24px / 3));
             text-transform: uppercase;
             margin: 0;
             padding: 10px;
-            color: pink; /* Changed text color to pink */
+            color: pink;
             letter-spacing: 1px;
             display: inline;
         }
 
-        /* Added styling for footer */
         footer {
             text-align: center;
             padding: 10px;
@@ -60,13 +57,11 @@
             color: #fff;
         }
 
-        /* Align all sections to the left */
         section {
             text-align: left;
-            margin-left: 20px; /* Optional: Add some left margin for better readability */
+            margin-left: 20px;
         }
 
-        /* Typewriter font for paragraphs */
         section p {
             font-family: "Courier New", Courier, monospace;
             font-size: 10px;
@@ -80,8 +75,8 @@
 </head>
 <body>
     <header>
-        <h1 style="font-size: 14px; color: #4d2600; text-transform: none; margin-bottom: 5px;">Hi! This is Hannah Shane Kate Pahama</h1>
-        <h1 style="font-size: 36px; margin-bottom: 10px;">Welcome to my Portfolio</h1>
+        <h1 style="font-size: 14px; color: #4d2600; text-transform: none; margin-bottom: 5px;">Hi, I am Hannah...</h1>
+        <h1 style="font-size: 36px; margin-bottom: 10px;">Welcome to my Portfolio!</h1>
         <p style="font-size: 14px; color: #4d2600; text-align: left;">Feel free to traverse through some information about me...</p>
     </header>
     
@@ -103,7 +98,7 @@
         <p>Youtube: @aye_sing</p>
     </section>
 
-    <img src="Cat_Meme.png">
+    <img src="C:\Users\paham\OneDrive\Pictures\Screenshots\Cat_Meme.png.png">
 
     <footer>
         <p>&copy; 2024 My Portfolio</p>
