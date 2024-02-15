@@ -66,8 +66,8 @@
         }
         section p {
             font-family: "Courier New", Courier, monospace;
-            font-size: 10px;
-            color: #333;
+            font-size: 11px;
+            color: #4d2600;
             line-height: 1.6;
             text-align: justify;
         }
