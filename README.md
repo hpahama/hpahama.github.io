@@ -96,7 +96,7 @@
         <p>You can reach me at hpahama@willamette.edu</p>
         <p>Youtube: @aye_sing</p>
     </section>
-    <img src="Cat_Meme.png.png">
+    <img src="Cat_Meme.png">
     <footer>
         <p>&copy; 2024 My Portfolio</p>
     </footer>
