@@ -98,6 +98,6 @@
     <footer>
         <p>&copy; 2024 My Portfolio</p>
     </footer>
+    <!-- The DOCTYPE declaration is placed here at the bottom -->
 </body>
 </html>
-<p>&lt; !DOCTYPE html&gt;</p>
