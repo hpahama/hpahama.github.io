@@ -82,6 +82,7 @@
           <h1 style="color: #f4e285">༘⋆₊✨°⊹★🪐࣭⭑⋆｡⊹࣪ </h1>
           <br>
           <h1 class="pixelized">Welcome to my Portfolio!</h1>
+          <br>
           <h1 style="font-size: 14px; font-family: 'Courier New', Courier, monospace; color: #4d2600;">Feel free to traverse through some information about me...</h1>
         </div>
     </header>
