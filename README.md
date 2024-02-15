@@ -16,7 +16,6 @@
             padding: 20px;
             text-align: center;
         }
-        }
         section h2, header h1 {
             text-decoration: none;
         }
@@ -24,14 +23,14 @@
             color: #ff1654;
             font-family: "Courier New", Courier, monospace;
         }
-        h1 {
+        header h1 {
             font-size: calc(24px + (24px / 3));
             text-transform: uppercase;
             margin: 0;
             padding: 10px;
-            color: pink;
-            letter-spacing: 1px;
             display: inline;
+            color: #4d2600; /* Match the background color of the header */
+            text-decoration: none; /* Remove underline */
         }
         .pixelized {
             font-family: 'Press Start 2P', cursive;
@@ -70,9 +69,6 @@
           <h1 style="font-size: 14px; font-family: 'Courier New', Courier, monospace; color: #4d2600;">Feel free to traverse through some information about me...</h1>
         </div>
     </header>
-    section h2, header h1 {
-        text-decoration: none;
-    }
     <section id="about">
         <h2>✦About Me</h2>
         <p>Meet me, the ultimate aficionado of life's simple pleasures—music, food, and books. You'll often find me grooving to tunes, indulging in delicious eats, and getting lost in the pages of a captivating novel. But when it's time for shut-eye, deadlines be darned! I nap like a seasoned pro, turning snooze time into an art form. And amidst the chaos of existence, I'm the curious cat pondering life's mysteries, all while embracing stoicism with the calm demeanor of a Zen master—stoic yet secretly amused by the cosmic joke.</p>
