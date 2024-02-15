@@ -55,10 +55,6 @@
             line-height: 1.6;
             text-align: justify;
         }
-        /* Remove underline from links */
-        a {
-            text-decoration: none;
-        }
     </style>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
 </head>
