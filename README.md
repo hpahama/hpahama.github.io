@@ -98,7 +98,7 @@
         <p>Youtube: @aye_sing</p>
     </section>
 
-    <img src="C:\Users\paham\OneDrive\Pictures\Screenshots\Cat_Meme.png.png">
+    <img src="Cat_Meme.png.png">
 
     <footer>
         <p>&copy; 2024 My Portfolio</p>
