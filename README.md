@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -28,6 +29,9 @@
         nav ul li a {
             text-decoration: none;
             color: #fff;
+        }
+        section h2, header h1 {
+            text-decoration: none;
         }
         section h2 {
             color: #ff1654;
