@@ -62,11 +62,11 @@
         <div>
           <h1 style="font-size: 14px; font-family: 'Courier New', Courier, monospace; color: #4d2600;">Hi, I am Hannah Shane Kate Pahama</h1>
           <br>
-          <h1 style="color: #f4e285"; text-decoration: none;>༘⋆₊✨°⊹★🪐࣭⭑⋆｡⊹࣪ </h1>
+          <h1 style="color: #f4e285";>༘⋆₊✨°⊹★🪐࣭⭑⋆｡⊹࣪ </h1>
           <br>
           <h1 class="pixelized">Welcome to my Portfolio!</h1>
           <br>
-          <h1 style="font-size: 14px; font-family: 'Courier New', Courier, monospace; color: #4d2600; text-decoration: none;">Feel free to traverse through some information about me...</h1>
+          <h1 style="font-size: 14px; font-family: 'Courier New', Courier, monospace; color: #4d2600;">Feel free to traverse through some information about me...</h1>
         </div>
     </header>
     <section id="about">
