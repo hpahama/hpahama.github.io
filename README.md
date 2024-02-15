@@ -89,13 +89,13 @@
         <p>
             Something Fun: 
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSeciufqc2BMocpoluTspfBT2NkUHXwJmQlZcvKVAKou97w0NQ/formResponse" style="text-decoration: none; color: inherit;">
-                Past-Time Questionnaire
+                <strong>Past-Time Questionnaire</strong>
             </a>
         </p>
         <p>
             Software Project: 
             <a href="https://www.canva.com/design/DAFzP0Zw2ME/c9sI9PVD_1STUdmjwoMD4w/edit?utm_content=DAFzP0Zw2ME&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" style="text-decoration: none; color: inherit;">
-                EZCAPE-UI: Your Security, Your Way
+                <strong>EZCAPE-UI</strong>
             </a>
         </p> 
     </section>
@@ -105,7 +105,7 @@
         <p>
             YouTube: 
             <a href="http://www.youtube.com/@aye_sing" style="text-decoration: none; color: inherit;">
-                @aye_sing
+                <strong>@aye_sing</strong>
             </a>
         </p>
     </section>
