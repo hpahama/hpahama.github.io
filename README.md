@@ -1,2 +1,112 @@
-# hpahama.github.io
-DATA352W #1
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: 'Press Start 2P', cursive;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0; /* Added margin reset */
+            padding: 0; /* Added padding reset */
+        }
+
+        header {
+            background-image: url('pixellated_background.png');
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0; /* Added margin reset */
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        /* Styling for subheaders */
+        section h2 {
+            color: #ff0080; /* Darker pink color */
+            font-family: "Courier New", Courier, monospace; /* Typewriter font */
+        }
+        
+        /* Simplified Header Styling */
+        h1 {
+            font-size: calc(24px + (24px / 3)); /* 1/3 bigger font size */
+            text-transform: uppercase;
+            margin: 0;
+            padding: 10px;
+            color: pink; /* Changed text color to pink */
+            letter-spacing: 1px;
+            display: inline;
+        }
+
+        /* Added styling for footer */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        /* Align all sections to the left */
+        section {
+            text-align: left;
+            margin-left: 20px; /* Optional: Add some left margin for better readability */
+        }
+
+        /* Typewriter font for paragraphs */
+        section p {
+            font-family: "Courier New", Courier, monospace;
+            font-size: 10px;
+            color: #333;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+</head>
+<body>
+    <header>
+        <h1 style="font-size: 14px; color: #4d2600; text-transform: none; margin-bottom: 5px;">Hi! This is Hannah Shane Kate Pahama</h1>
+        <h1 style="font-size: 36px; margin-bottom: 10px;">Welcome to my Portfolio</h1>
+        <p style="font-size: 14px; color: #4d2600; text-align: left;">Feel free to traverse through some information about me...</p>
+    </header>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Meet me, the ultimate aficionado of life's simple pleasures—music, food, and books. You'll often find me grooving to tunes, indulging in delicious eats, and getting lost in the pages of a captivating novel. But when it's time for shut-eye, deadlines be darned! I nap like a seasoned pro, turning snooze time into an art form. And amidst the chaos of existence, I'm the curious cat pondering life's mysteries, all while embracing stoicism with the calm demeanor of a Zen master—stoic yet secretly amused by the cosmic joke.</p>
+    </section>
+
+    <section id="expectations">
+        <h2>Expectations</h2>
+        <p>
+            In this course, I am eager to deepen my understanding of ethical considerations in data science and refine my collaborative skills. Additionally, I seek to enhance my knowledge of data analytics and strengthen my writing abilities that I may apply in my professional endeavors. Through this course, I anticipate gaining insights into navigating ethical dilemmas in data-driven decision-making and honing my capacity to work effectively within interdisciplinary teams. By focusing on both ethical frameworks and communication skills, I aim to emerge equipped to contribute meaningfully to data-driven projects while articulating insights with clarity and precision.
+        </p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>You can reach me at hpahama@willamette.edu</p>
+        <p>Youtube: @aye_sing</p>
+    </section>
+
+    <img src="Cat_Meme.png">
+
+    <footer>
+        <p>&copy; 2024 My Portfolio</p>
+    </footer>
+</body>
+</html>
