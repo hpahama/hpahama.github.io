@@ -16,6 +16,27 @@
             background-color: #e5989b;
             padding: 20px;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(128, 0, 128, 0.1), rgba(128, 0, 128, 0.2), transparent);
+            transform: scale(0);
+            transition: transform 0.5s;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        header:hover::before {
+            transform: scale(2);
+        }
+        header:hover {
+            background-color: #6495ED;
         }
         section h2, header h1 {
             text-decoration: none;
@@ -50,8 +71,8 @@
         }
         section p {
             font-family: "Courier New", Courier, monospace;
-            font-size: 11px;
-            color: #a53860;
+            font-size: 15px;
+            color: #900C3F;
             line-height: 1.6;
             text-align: justify;
         }
@@ -61,17 +82,17 @@
 <body>
     <header>
         <div>
-          <h1 style="font-size: 14px; font-family: 'Courier New', Courier, monospace; color: #4d2600;">
-              <a href="https://github.com/hpahama" style="text-decoration: none; color: inherit;">
-                  Hi, I am Hannah Shane Kate Pahama
-              </a>
-          </h1>
-          <br>
-          <h1 style="color: #f4e285;">༘⋆₊✨°⊹★🪐࣭⭑⋆｡⊹࣪ </h1>
-          <br>
-          <h1 class="pixelized">Welcome to my Portfolio!</h1>
-          <br>
-          <h1 style="font-size: 14px; font-family: 'Courier New', Courier, monospace; color: #4d2600;">Feel free to traverse through some information about me...</h1>
+            <h1 style="font-size: 14px; font-family: 'Courier New', Courier, monospace; color: #900C3F;">
+                <a href="https://github.com/hpahama" style="text-decoration: none; color: inherit;">
+                    Hi, I am Hannah Shane Kate Pahama
+                </a>
+            </h1>
+            <br>
+            <h1 style="color: #f4e285;">༘⋆₊✨°⊹★🪐࣭⭑⋆｡⊹࣪ </h1>
+            <br>
+            <h1 class="pixelized">Welcome to my Portfolio!</h1>
+            <br>
+            <h1 style="font-size: 14px; font-family: 'Courier New', Courier, monospace; color: #900C3F;">Feel free to traverse through some information about me...</h1>
         </div>
     </header>
     <section id="about">
@@ -85,25 +106,25 @@
         </p>
     </section>
     <section id="Fun Stuff">
-    	<h2>✦Links</h2>
+        <h2>✦Links</h2>
         <p>
-            Something Fun: 
+            Something Fun:
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSeciufqc2BMocpoluTspfBT2NkUHXwJmQlZcvKVAKou97w0NQ/formResponse" style="text-decoration: none; color: inherit;">
                 <strong>Past-Time Questionnaire</strong>
             </a>
         </p>
         <p>
-            Software Project: 
+            Software Project:
             <a href="https://www.canva.com/design/DAFzP0Zw2ME/c9sI9PVD_1STUdmjwoMD4w/edit?utm_content=DAFzP0Zw2ME&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" style="text-decoration: none; color: inherit;">
                 <strong>EZCAPE-UI</strong>
             </a>
-        </p> 
+        </p>
     </section>
     <section id="contact">
         <h2>✦Contact Me</h2>
         <p>You can reach me at hpahama@willamette.edu</p>
         <p>
-            YouTube: 
+            YouTube:
             <a href="http://www.youtube.com/@aye_sing" style="text-decoration: none; color: inherit;">
                 <strong>@aye_sing</strong>
             </a>
