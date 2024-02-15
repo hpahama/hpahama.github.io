@@ -43,6 +43,17 @@
             letter-spacing: 1px;
             display: inline;
         }
+        .pixelized {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 36px;
+            color: #FFC0CB;
+            text-transform: uppercase;
+            display: inline-block;
+            letter-spacing: 0.1em;
+            text-shadow: 1px 1px 0 #000;
+            -webkit-font-smoothing: none;
+            -moz-osx-font-smoothing: grayscale;
+        }
         footer {
             text-align: center;
             padding: 10px;
@@ -67,7 +78,7 @@
     <header>
         <h1 style="font-size: 14px; color: #4d2600; text-transform: none; margin-bottom: 5px;">Hi, I am Hannah Shane Kate Pahama</h1>
         <br>
-        <h1 style="font-size: 36px; color: #FFC0CB;">Welcome to my Portfolio!</h1>
+        <h1 class="pixelized">Welcome to my Portfolio!</h1>
         <p style="font-size: 14px; color: #4d2600; text-align: left;">Feel free to traverse through some information about me...</p>
     </header>
     <section id="about">
