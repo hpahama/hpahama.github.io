@@ -16,18 +16,6 @@
             padding: 20px;
             text-align: center;
         }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin-right: 10px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: #fff;
         }
         section h2, header h1 {
             text-decoration: none;
