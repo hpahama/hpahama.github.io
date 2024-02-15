@@ -1,3 +1,4 @@
+<!--<!DOCTYPE html>-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -60,7 +61,11 @@
 <body>
     <header>
         <div>
-          <h1 style="font-size: 14px; font-family: 'Courier New', Courier, monospace; color: #4d2600;">Hi, I am Hannah Shane Kate Pahama</h1>
+          <h1 style="font-size: 14px; font-family: 'Courier New', Courier, monospace; color: #4d2600;">
+              <a href="https://github.com/hpahama" style="text-decoration: none; color: inherit;">
+                  Hi, I am Hannah Shane Kate Pahama
+              </a>
+          </h1>
           <br>
           <h1 style="color: #f4e285;">༘⋆₊✨°⊹★🪐࣭⭑⋆｡⊹࣪ </h1>
           <br>
@@ -79,10 +84,30 @@
             In this course, I am eager to deepen my understanding of ethical considerations in data science and refine my collaborative skills. Additionally, I seek to enhance my knowledge of data analytics and strengthen my writing abilities that I may apply in my professional endeavors. Through this course, I anticipate gaining insights into navigating ethical dilemmas in data-driven decision-making and honing my capacity to work effectively within interdisciplinary teams. By focusing on both ethical frameworks and communication skills, I aim to emerge equipped to contribute meaningfully to data-driven projects while articulating insights with clarity and precision.
         </p>
     </section>
+    <section id="Fun Stuff">
+    	<h2>✦Links</h2>
+        <p>
+            Something Fun: 
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeciufqc2BMocpoluTspfBT2NkUHXwJmQlZcvKVAKou97w0NQ/formResponse" style="text-decoration: none; color: inherit;">
+                Past-Time Questionnaire
+            </a>
+        </p>
+        <p>
+            Software Project: 
+            <a href="https://www.canva.com/design/DAFzP0Zw2ME/c9sI9PVD_1STUdmjwoMD4w/edit?utm_content=DAFzP0Zw2ME&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" style="text-decoration: none; color: inherit;">
+                EZCAPE-UI: Your Security, Your Way
+            </a>
+        </p> 
+    </section>
     <section id="contact">
         <h2>✦Contact Me</h2>
         <p>You can reach me at hpahama@willamette.edu</p>
-        <p>Youtube: @aye_sing</p>
+        <p>
+            YouTube: 
+            <a href="http://www.youtube.com/@aye_sing" style="text-decoration: none; color: inherit;">
+                @aye_sing
+            </a>
+        </p>
     </section>
     <img src="Cat_Meme.png.png">
     <footer>
