@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Company</title>
+    <style>
+        body {
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            background-color: #2de2e6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #eec2ff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-family: Monospace;
+           
+            color: #f6019d;
+            border-style: dashed;
+            border-color: #FFFFFF;
+            border-width: 4px;
+            font-size: 50px;
+            text-align: center;
+           
+        }
+        p {
+            color: #666;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #fca103;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #fc6203;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="main-heading"><b> WATCHMASTERS </b> </h1>
+        <p>We're more than just a watch company and here's what sets us apart:</p>
+        <ul>
+            <li>We buy, sell, and fix watches.</li>
+            <li>We're the reliable go-to for watch enthusiasts in the community.</li>
+            <li>We take care of our customers and find the right watches for their needs.</li>
+        </ul>
+        <p>But that's not all! We know how important watches are to you. In fact, studies show that people are more averse to losing something they already have than gaining something new. That's why we're here to help you find the perfect watch – because missing out on the right timepiece would be a loss you won't want to bear!</p>
+        <p>"Time's just a fragment of your imagination - embrace the magic with Make-Believe Watches!"</p>
+        <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&pp=ygUKcmljayByb2xsIA%3D%3D" class="cta-button">Explore Our Watches</a>
+    </div>
+
+    <script>
+        document.getElementById("main-heading").addEventListener("mouseover", function() {
+            this.style.color = "#035ee8";
+        });
+
+        document.getElementById("main-heading").addEventListener("mouseout", function() {
+            this.style.color = "#f6019d";
+        });
+    </script>
+</body>
+</html>
