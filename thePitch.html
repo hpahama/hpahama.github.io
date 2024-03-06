@@ -3,72 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Watch Company</title>
+    <title>WatchMasters - Timepiece Experts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            background-color: #f9f9f9;
+            background-color: #111111;
             margin: 0;
             padding: 0;
-            background-color: #2de2e6;
+            font-family: 'Roboto Mono', monospace;
+            color: #d1d1d1;
+            background-image: url('your_image_url.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-blend-mode: overlay;
+        }
+        .header {
+            background-color: rgba(0, 28, 53, 0.8);
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #ff5370;
+            font-size: 3rem;
+            text-align: center;
+            border-bottom: 4px dashed #ffffff;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
         }
         .container {
             max-width: 800px;
-            margin: 0 auto;
+            margin: 20px auto;
             padding: 20px;
-            background-color: #eec2ff;
+            background-color: rgba(0, 28, 53, 0.8);
             border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            font-family: Monospace;
-           
-            color: #f6019d;
-            border-style: dashed;
-            border-color: #FFFFFF;
-            border-width: 4px;
-            font-size: 50px;
-            text-align: center;
-           
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
         }
         p {
-            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        ul {
+            margin-bottom: 15px;
         }
         .cta-button {
             display: inline-block;
             padding: 10px 20px;
-            background-color: #fca103;
-            color: #ffffff;
+            background-color: #ff5370;
+            color: #1afe49;
             text-decoration: none;
             border-radius: 5px;
             transition: background-color 0.3s ease;
+            margin-top: 20px;
         }
         .cta-button:hover {
-            background-color: #fc6203;
+            background-color: #3d43b4;
+        }
+        .testimonial {
+            margin-top: 30px;
+        }
+        .testimonial p {
+            font-style: italic;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1 id="main-heading"><b> WATCHMASTERS </b> </h1>
-        <p>We're more than just a watch company and here's what sets us apart:</p>
-        <ul>
-            <li>We buy, sell, and fix watches.</li>
-            <li>We're the reliable go-to for watch enthusiasts in the community.</li>
-            <li>We take care of our customers and find the right watches for their needs.</li>
-        </ul>
-        <p>But that's not all! We know how important watches are to you. In fact, studies show that people are more averse to losing something they already have than gaining something new. That's why we're here to help you find the perfect watch – because missing out on the right timepiece would be a loss you won't want to bear!</p>
-        <p>"Time's just a fragment of your imagination - embrace the magic with Make-Believe Watches!"</p>
-        <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&pp=ygUKcmljayByb2xsIA%3D%3D" class="cta-button">Explore Our Watches</a>
+    <div class="header">
+        <h1>WATCHMASTERS</h1>
     </div>
-
-    <script>
-        document.getElementById("main-heading").addEventListener("mouseover", function() {
-            this.style.color = "#035ee8";
-        });
-
-        document.getElementById("main-heading").addEventListener("mouseout", function() {
-            this.style.color = "#f6019d";
-        });
-    </script>
+    <div class="container">
+        <p>Welcome to WatchMasters! Your ultimate destination for all things watches. Here's what sets us apart:</p>
+        <ul>
+            <li>We prioritize customer satisfaction and help you find the perfect timepiece.</li>
+            <li>We specialize in sourcing the perfect gears to repair and enhance your timepieces, ensuring they stand the test of time.</li>
+            <li>We're the trusted choice for watch enthusiasts in the community.</li>
+        </ul>
+        <p>But that’s not all! We recognize the significant impact of a watch in your life. Research indicates that people often form stronger attachments to what they already possess compared to new acquisitions. That’s why we are dedicated to assisting you in finding the perfect timepiece. Missing out on the right watch would be an irreplaceable loss. But that's why we exist!</p>
+        <p>"We are the WatchMasters, we serve you big time!"</p>
+        <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&pp=ygUKcmljayByb2xsIA%3D%3D" class="cta-button">Explore Our Collection</a>
+        
+        <!-- Testimonials Section -->
+        <div class="testimonial">
+            <h2>What Our Customers Say:</h2>
+            <p>"I've been a loyal customer of WatchMasters for years. Their expertise and customer service are unparalleled!"</p>
+            <p>"Thanks to WatchMasters, my vintage watch looks and works like new again. Highly recommended!"</p>
+        </div>
+    </div>
 </body>
 </html>
