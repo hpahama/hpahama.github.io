@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Apps Development Project SCRP Application (2024)</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            font-size: 12pt;
+            line-height: 1.5;
+            margin: 1in;
+            text-align: justify;
+        }
+        
+        section {
+            margin-bottom: 20px;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .subheader {
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Learning Apps Development Project SCRP Application (2024)</h1>
+        <p class="subheader">Personal Statement</p>
+    </header>
+
+    <section>
+        <h2>About Myself:</h2>
+        <p>
+            I am an international student from the Philippines with a background in Computer Engineering. Upon transferring to Willamette University, I brought two years' worth of credits, facilitating a smooth transition to my current status as a Junior. Fueled by a deep fascination for neuroscience and technology, I am now pursuing a path in Data Science. My curiosity drives me to persistently dedicate myself to long-term goals. I thrive in environments that encourage open discussions and hands-on experiences, finding utility in meaningful accomplishments and progress, emphasizing consistency above all else.
+        </p>
+    </section>
+
+    <section>
+        <h2>Interest in the Project:</h2>
+        <p>
+            The Learning Apps Development Project has captured my attention for several reasons. Exploring the integration of diverse theories aligns perfectly with my values and the project's commitment to a human-centered design approach, promising to revolutionize learning experiences. Contributing to the creation of impactful educational tools presents an opportunity to make a significant difference in the learning landscape, potentially enhancing the effectiveness of our Willamette Website. Eager to be part of this project, I am confident that my involvement will be fulfilling and contribute to its success.
+        </p>
+    </section>
+
+    <section>
+        <h2>Career Interests and Long-Term Goals:</h2>
+        <p>
+            Inspired by visionary entrepreneurs, my career vision converges at the intersection of technology, design, entrepreneurship, cognitive psychology, and innovation. My overarching objective is to leverage technology for significant transformation, challenging traditional paradigms to play a pivotal role in shaping a more promising future for human experiences.
+        </p>
+    </section>
+
+    <section>
+        <h2>Benefits from Participation:</h2>
+        <p>
+            Participating in the Learning Apps Development Project perfectly aligns with both my career aspirations and academic pursuits. This engagement represents a distinctive chance for me to showcase my proficiency as a student through meaningful contributions to the development of creative educational tools. Beyond the tangible outcomes, the collaborative essence of this project presents opportunities for extensive cross-disciplinary learning and fosters my personal growth—a prospect I enthusiastically welcome.
+
+            My involvement in this initiative extends beyond conventional research endeavors. I see it as a genuine opportunity to make a distinctive and lasting impact on the Willamette Community. By aligning closely with the institution's ethos, I aim to contribute in a way that goes beyond the immediate project goals. I envision making a meaningful investment in the enhancement of the institution as a whole, leveraging my skills and perspective to contribute uniquely to the community and its educational objectives. This commitment reflects my dedication to not only meet but exceed the expectations of a participating student, contributing to the broader advancement of the learning environment at Willamette.
+        </p>
+    </section>
+
+</body>
+</html>
