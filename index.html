@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Integrated Matrix Effect and Portfolio</title>
     <style>
         body {
             font-family: 'Press Start 2P', cursive;
@@ -13,30 +13,11 @@
             padding: 0;
         }
         header {
-            background-color: #e5989b;
+            background-color: #F2B8C5;
             padding: 20px;
             text-align: center;
             position: relative;
             overflow: hidden;
-        }
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle, rgba(128, 0, 128, 0.1), rgba(128, 0, 128, 0.2), transparent);
-            transform: scale(0);
-            transition: transform 0.5s;
-            border-radius: 50%;
-            pointer-events: none;
-        }
-        header:hover::before {
-            transform: scale(2);
-        }
-        header:hover {
-            background-color: #6495ED;
         }
         section h2, header h1 {
             text-decoration: none;
@@ -70,14 +51,47 @@
             margin-left: 20px;
         }
         section p {
-	    font-family: "Courier New", Courier, monospace;
-	    font-size: 15px;
-	    color: #900C3F;
-	    line-height: 1.6;
-	    text-align: justify;
-	    padding-right: 20px;
-	}
+            font-family: "Courier New", Courier, monospace;
+            font-size: 15px;
+            color: #900C3F;
+            line-height: 1.6;
+            text-align: justify;
+            padding-right: 20px;
+        }
 
+        .squircle-container {
+            background-color: #F2B8C5;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 20px auto;
+            border: 3px solid #FFD700;
+            transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out;
+            position: relative;
+            z-index: 1;
+        }
+
+        .squircle-container:hover {
+            background-color: #FFF2B2;
+            transform: scale(1.05) translateY(-5px);
+            border: 3px solid #ff1654;
+        }
+
+        .matrix-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        .falling-character {
+            position: absolute;
+            color: #ff1654;
+            font-family: monospace;
+        }
     </style>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
 </head>
@@ -94,10 +108,15 @@
             <br>
             <h1 class="pixelized">Welcome to my DATA-352W Page!</h1>
             <br>
-            <h1 style="font-size: 14px; font-family: 'Courier New', Courier, monospace; color: #900C3F;">Feel free to traverse through my some information about me and my course works right here...</h1>
+            <h1 style="font-size: 12px; font-family: 'Courier New', Courier, monospace; color: #900C3F; padding: 20px;">Feel free to traverse through my some information about me and my course works right here...</h1>
         </div>
     </header>
-    <section id="contact">
+
+    <!-- Matrix Effect Container -->
+    <div class="matrix-container"></div>
+
+    <!-- Portfolio Sections -->
+    <section id="contact" class="squircle-container">
         <h2>✦Student Information</h2>
         <p>Name: Hannah Shane Kate Pahama</p>
         <p>
@@ -111,22 +130,19 @@
         <p>WU Roster Name: Hannah Pahama</p>
         <p>Youtube: @aye_sing</p>
     </section>
-    <section id="about">
-		<img src="Cat_Meme.png.png" style="width: 30%;">
+
+    <section id="about" class="squircle-container">
+        <img src="Cat_Meme.png.png" style="width: 30%;">
         <h2>✦About Me</h2>
-        <p>	Meet me, the ultimate aficionado of life's simple pleasures—music, food, and books. You'll often find me grooving to tunes, indulging in delicious eats, and getting lost in the pages of a captivating novel. But when it's time for shut-eye, deadlines be darned! I nap like a seasoned pro, turning snooze time into an art form. And amidst the chaos of existence, I'm the curious cat pondering life's mysteries, all while embracing stoicism with the calm demeanor of a Zen master—stoic yet secretly amused by the cosmic joke.</p>
+        <p>Meet me, the ultimate aficionado of life's simple pleasures—music, food, and books. You'll often find me grooving to tunes, indulging in delicious eats, and getting lost in the pages of a captivating novel. But when it's time for shut-eye, deadlines be darned! I nap like a seasoned pro, turning snooze time into an art form. And amidst the chaos of existence, I'm the curious cat pondering life's mysteries, all while embracing stoicism with the calm demeanor of a Zen master—stoic yet secretly amused by the cosmic joke.</p>
     </section>
-    <section id="expectations">
+    <section id="expectations" class="squircle-container">
         <h2>✦Expectations</h2>
-        <p>	
-          In this course, I am eager to deepen my understanding of ethical considerations in data science and refine my collaborative skills. Additionally, I seek to enhance my knowledge of data analytics and strengthen my writing abilities that I may apply in my professional endeavors.
-        </p>
-        <p>
-          Through this course, I anticipate gaining insights into navigating ethical dilemmas in data-driven decision-making and honing my capacity to work effectively within interdisciplinary teams. By focusing on both ethical frameworks and communication skills, I aim to emerge equipped to contribute meaningfully to data-driven projects while articulating insights with clarity and precision.
-        </p>
+        <p>In this course, I am eager to deepen my understanding of ethical considerations in data science and refine my collaborative skills. Additionally, I seek to enhance my knowledge of data analytics and strengthen my writing abilities that I may apply in my professional endeavors.</p>
+        <p>Through this course, I anticipate gaining insights into navigating ethical dilemmas in data-driven decision-making and honing my capacity to work effectively within interdisciplinary teams. By focusing on both ethical frameworks and communication skills, I aim to emerge equipped to contribute meaningfully to data-driven projects while articulating insights with clarity and precision.</p>
     </section>
 
-    <section id="Links">
+	<section id="Links" class="squircle-container">
         <h2>✦Course Projects & Task Links</h2>
         <p>
             Resume:
@@ -165,16 +181,79 @@
             </a>
         </p>
         <p>
-	<p>
             Response Paper:
             <a href="https://hpahama.github.io/BlackHair.html" style="text-decoration: none; color: inherit;">
                 <strong>We Need to Fix Black Hair in Video Games</strong>
             </a>
         </p>
-	<p>
+        <p>
             Response Paper:
             <a href="https://hpahama.github.io/hud.html" style="text-decoration: none; color: inherit;">
                 <strong>Topics About Discrimination</strong>
             </a>
         </p>
     </section>
+
+    </section>
+
+    <script>
+        const characters = ['⋆', '₊', '°', '⊹', '★','⭐', '🪐', '࣭', '⭑', '⋆', '｡', '⊹', '࣪'];
+
+        function randomPosition(maxX) {
+            return Math.floor(Math.random() * maxX);
+        }
+
+        function randomRotation() {
+            return Math.random() * 4 + 1;
+        }
+
+        function randomSize() {
+            return Math.floor(Math.random() * 20) + 10;
+        }
+
+        function randomOpacity() {
+            return Math.random() * 0.5 + 0.5;
+        }
+
+        function createCharacter() {
+            const character = document.createElement('div');
+            character.classList.add('falling-character');
+            character.textContent = characters[Math.floor(Math.random() * characters.length)];
+            const positionX = randomPosition(window.innerWidth);
+            const positionY = -50;
+            const size = randomSize();
+            character.style.left = positionX + 'px';
+            character.style.top = positionY + 'px';
+            character.style.fontSize = size + 'px';
+            character.style.opacity = randomOpacity();
+            character.rotation = randomRotation();
+            return character;
+        }
+
+        function animateCharacter(character) {
+            const fall = setInterval(() => {
+                const currentTop = parseFloat(character.style.top);
+                if (currentTop >= window.innerHeight) {
+                    clearInterval(fall);
+                    character.remove();
+                    const newCharacter = createCharacter();
+                    document.querySelector('.matrix-container').appendChild(newCharacter);
+                    animateCharacter(newCharacter);
+                } else {
+                    character.style.top = (currentTop + 2) + 'px';
+                    character.style.transform = `rotate(${parseFloat(character.style.transform ? character.style.transform.replace('rotate(', '').replace('deg)', '') : 0) + character.rotation}deg)`;
+                }
+            }, 50);
+        }
+        function startMatrix() {
+            setInterval(() => {
+                const character = createCharacter();
+                document.querySelector('.matrix-container').appendChild(character);
+                animateCharacter(character);
+            }, 100);
+        }
+
+        window.onload = startMatrix;
+    </script>
+</body>
+</html>
