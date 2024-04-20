@@ -92,10 +92,81 @@
             color: #ff1654;
             font-family: monospace;
         }
+
+        /* Dark mode styles */
+        body.dark-mode {
+            background-color: #462446;
+        }
+
+        .squircle-container.dark-mode {
+            background-color: #DAC17C;
+            border-color: #EB6B56;
+        }
+
+        .squircle-container.dark-mode:hover {
+            background-color: #FBE790;
+            border-color: #ff1654;
+        }
+
+        .matrix-container.dark-mode .falling-character {
+            color: #FFD700;
+        }
+
+        /* Toggle Switch Styles */
+        .toggle-switch {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 9999;
+        }
+
+        .toggle-switch input {
+            display: none;
+        }
+
+        .toggle-slider {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+            background-color: LightYellow;
+            border: 0.5px solid orange;
+            border-radius: 34px;
+            cursor: pointer;
+            transition: background-color 0.4s;
+        }
+
+        .toggle-slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: Lightpink;
+            border-radius: 50%;
+            transition: transform 0.5s, background-color 0.5s;
+        }
+
+        input:checked + .toggle-slider {
+            background-color: #462446;
+            border-color: LightYellow; /* Change border color to green for dark mode */
+        }
+
+        input:checked + .toggle-slider:before {
+            transform: translateX(26px);
+            background-color: #C0262C;
+        }
     </style>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
 </head>
 <body>
+    <!-- Toggle Switch -->
+    <label class="toggle-switch">
+        <input type="checkbox">
+        <span class="toggle-slider"></span>
+    </label>
+
     <header>
         <div>
             <h1 style="font-size: 14px; font-family: 'Courier New', Courier, monospace; color: #900C3F;">
@@ -207,7 +278,6 @@
         </p>
     </section>
 
-
     <script>
         const characters = ['⋆', '₊', '°', '⊹', '★','⭐', '🪐', '࣭', '⭑', '⋆', '｡', '⊹', '࣪'];
         const maxCharacters = 200; // Limit the number of falling characters
@@ -271,6 +341,17 @@
         }
 
         window.onload = startMatrix;
+
+        // Dark mode toggle functionality
+        const darkModeToggle = document.querySelector('.toggle-switch input');
+        const darkModeElements = document.querySelectorAll('.squircle-container, .matrix-container');
+
+        darkModeToggle.addEventListener('change', () => {
+            document.body.classList.toggle('dark-mode');
+            darkModeElements.forEach(element => {
+                element.classList.toggle('dark-mode');
+            });
+        });
     </script>
 </body>
 </html>
