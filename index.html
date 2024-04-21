@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Integrated Matrix Effect and Portfolio</title>
     <style>
+        /* Base styles */
         body {
             font-family: 'Press Start 2P', cursive;
             background-color: #F7E7CE;
@@ -12,20 +13,23 @@
             margin: 0;
             padding: 0;
         }
+
         header {
-            background-color: #F2B8C5;
-            padding: 20px;
             text-align: center;
             position: relative;
             overflow: hidden;
         }
-        section h2, header h1 {
+
+        section h2,
+        header h1 {
             text-decoration: none;
         }
+
         section h2 {
             color: #ff1654;
             font-family: "Courier New", Courier, monospace;
         }
+
         header h1 {
             font-size: calc(24px + (24px / 3));
             text-transform: uppercase;
@@ -35,6 +39,7 @@
             color: #4d2600;
             text-decoration: none;
         }
+
         .pixelized {
             font-family: 'Press Start 2P', cursive;
             font-size: 36px;
@@ -46,10 +51,12 @@
             -webkit-font-smoothing: none;
             -moz-osx-font-smoothing: grayscale;
         }
+
         section {
             text-align: left;
             margin-left: 20px;
         }
+
         section p {
             font-family: "Courier New", Courier, monospace;
             font-size: 15px;
@@ -87,6 +94,7 @@
             pointer-events: none;
             z-index: -1;
         }
+
         .falling-character {
             position: absolute;
             color: #ff1654;
@@ -95,21 +103,21 @@
 
         /* Dark mode styles */
         body.dark-mode {
-            background-color: #462446;
+            background-color: #0E2038;
         }
 
         .squircle-container.dark-mode {
-            background-color: #DAC17C;
-            border-color: #EB6B56;
+            background-color: #632D5E;
+            border-color: #636CDF;
         }
 
         .squircle-container.dark-mode:hover {
-            background-color: #FBE790;
-            border-color: #ff1654;
+            background-color: #7053B5;
+            border-color: #00F7F4;
         }
 
         .matrix-container.dark-mode .falling-character {
-            color: #FFD700;
+            color: #00f7f4;
         }
 
         /* Toggle Switch Styles */
@@ -130,7 +138,6 @@
             width: 60px;
             height: 34px;
             background-color: LightYellow;
-            border: 0.5px solid orange;
             border-radius: 34px;
             cursor: pointer;
             transition: background-color 0.4s;
@@ -150,12 +157,16 @@
 
         input:checked + .toggle-slider {
             background-color: #462446;
-            border-color: LightYellow; /* Change border color to green for dark mode */
         }
 
         input:checked + .toggle-slider:before {
             transform: translateX(26px);
-            background-color: #C0262C;
+            background-color: #ff1654;
+        }
+
+        /* Dark mode text color */
+        .dark-mode-text {
+            color: #00F7F4;
         }
     </style>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
@@ -175,7 +186,6 @@
                 </a>
             </h1>
             <br>
-            <h1 style="color: #f4e285;">༘⋆₊✨°⊹★🪐࣭⭑⋆｡⊹࣪ </h1>
             <br>
             <h1 class="pixelized">Welcome to my DATA-352W Page!</h1>
             <br>
@@ -344,12 +354,18 @@
 
         // Dark mode toggle functionality
         const darkModeToggle = document.querySelector('.toggle-switch input');
-        const darkModeElements = document.querySelectorAll('.squircle-container, .matrix-container');
+        const darkModeElements = document.querySelectorAll('.squircle-container, .matrix-container, header, section');
 
         darkModeToggle.addEventListener('change', () => {
             document.body.classList.toggle('dark-mode');
             darkModeElements.forEach(element => {
                 element.classList.toggle('dark-mode');
+            });
+
+            // Toggle text color for specific elements
+            const textElements = document.querySelectorAll('.pixelized, .squircle-container h2, .squircle-container p');
+            textElements.forEach(element => {
+                element.classList.toggle('dark-mode-text');
             });
         });
     </script>
