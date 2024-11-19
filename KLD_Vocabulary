@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KL Divergence Vocabulary</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        .vocab-term {
+            font-weight: bold;
+            color: navy;
+            display: block;
+            margin: 10px 0 5px;
+        }
+        .vocab-definition {
+            background: #ffffff;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>KL Divergence Vocabulary</h1>
+
+    <div class="vocab-definition">
+        <span class="vocab-term">Anomaly Detection</span>
+        The identification of unusual patterns that do not conform to expected behavior in a dataset.
+    </div>
+    
+    <div class="vocab-definition">
+        <span class="vocab-term">Baseline Distribution</span>
+        The reference distribution used as a standard for comparison with other distributions in data analysis.
+    </div>
+    
+    <div class="vocab-definition">
+        <span class="vocab-term">Continuous Distribution</span>
+        A probability distribution that shows the probabilities of outcomes of a continuous random variable.
+    </div>
+    
+    <div class="vocab-definition">
+        <span class="vocab-term">Data Binning</span>
+        The process of grouping a number of continuous or discrete values into smaller bins.
+    </div>
+    
+    <div class="vocab-definition">
+        <span class="vocab-term">Data Drift</span>
+        The change in the statistical properties of the input data over time, which can affect model performance.
+    </div>
+    
+    <div class="vocab-definition">
+        <span class="vocab-term">Discrete Distribution</span>
+        A probability distribution that shows the probabilities of outcomes of a discrete random variable.
+    </div>
+    
+    <div class="vocab-definition">
+        <span class="vocab-term">Entropy</span>
+        A measure of randomness or disorder in a system, often related to information loss in data distributions.
+    </div>
+    
+    <div class="vocab-definition">
+        <span class="vocab-term">Feature Selection</span>
+        The process of selecting the most important variables that contribute to the predictive power of a model.
+    </div>
+    
+    <div class="vocab-definition">
+        <span class="vocab-term">Ground Truth</span>
+        Accurate data or observations used as a benchmark to validate model predictions.
+    </div>
+    
+    <div class="vocab-definition">
+        <span class="vocab-term">Hypothesis Testing</span>
+        A method of making statistical decisions using experimental data.
+    </div>
+
+    <div class="vocab-definition">
+        <span class="vocab-term">Information Gain</span>
+        A measure of the improvement in model accuracy gained by splitting the data based on a particular feature.
+    </div>
+    
+    <div class="vocab-definition">
+        <span class="vocab-term">Information Loss</span>
+        The loss of information that occurs when approximating one probability distribution with another.
+    </div>
+
+    <div class="vocab-definition">
+        <span class="vocab-term">Integral</span>
+        A mathematical operation that calculates the area under a curve, used in continuous distributions.
+    </div>
+    
+    <div class="vocab-definition">
+        <span class="vocab-term">Kullback-Leibler Divergence (KL Divergence)</span>
+        A measure from information theory that quantifies the difference between two probability distributions.
+    </div>
+    
+    <div class="vocab-definition">
+        <span class="vocab-term">Model Evaluation</span>
+        The process of assessing how well a statistical model or machine learning algorithm performs.
+    </div>
+    
+    <div class="vocab-definition">
+        <span class="vocab-term">Probability Distribution</span>
+        A mathematical function that provides the probabilities of occurrence of different possible outcomes in an experiment.
+    </div>
+    
+    <div class="vocab-definition">
+        <span class="vocab-term">Relative Entropy</span>
+        Another term for KL Divergence, indicating the measure of how one probability distribution diverges from a second, expected probability distribution.
+    </div>
+    
+    <div class="vocab-definition">
+        <span class="vocab-term">Summation</span>
+        A mathematical operation that adds together a sequence of numbers or terms.
+    </div>
+</body>
+</html>
