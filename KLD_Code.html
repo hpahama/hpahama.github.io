@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Company Dataset Code</title>
+<style>
+    body {
+        font-family: 'Courier New', Courier, monospace;
+        background-color: #f6f8fa;
+        color: #24292e;
+        padding: 20px;
+    }
+    pre {
+        background-color: #ffffff;
+        border: 1px solid #e1e4e8;
+        border-radius: 6px;
+        padding: 16px;
+        overflow: auto;
+    }
+    code {
+        font-family: 'Courier New', Courier, monospace;
+        color: #24292e;
+    }
+    .comment { color: #6a737d; }
+    .keyword { color: #d73a49; }
+    .number { color: #005cc5; }
+    .string { color: #032f62; }
+    .function { color: #6f42c1; }
+</style>
+</head>
+<body>
+<h1>R Code with GitHub Theme</h1>
+<pre><code>
+<span class="comment">#install.packages("philentropy")</span>
+<span class="keyword">library</span>(tidyverse)
+<span class="keyword">library</span>(philentropy)
+
+<span class="comment">#random probability distribution</span>
+<span class="function">prob_dist</span>=<span class="keyword">function</span>(foo){
+  probs=<span class="function">runif</span>(foo)
+  probs/<span class="function">sum</span>(probs)
+}
+
+<span class="comment">#creating 2 distinct probability distributions</span>
+p=<span class="function">prob_dist</span>(10)
+q=<span class="function">prob_dist</span>(10)
+
+<span class="comment">#binding them into a single dataset</span>
+x=<span class="function">rbind</span>(p,q)
+
+x_data = <span class="keyword">as.data.frame</span>(x)
+<span class="function">names</span>(x_data)
+
+x_data_pivot = <span class="function">pivot_longer</span>(data=x_data,
+               cols=<span class="string">"V1"</span>:<span class="string">"V10"</span>,
+               values_to=<span class="string">"probability"</span>,
+               names_to=<span class="string">"Random Var"</span>)
+
+x_data_2dist = x_data_pivot %>%
+  <span class="function">mutate</span>(dist = <span class="function">ifelse</span>(<span class="function">row_number</span>() <= 10, <span class="string">"p"</span>, <span class="string">"q"</span>))
+
+<span class="comment">#running philentropy's KL function</span>
+d_KL=<span class="keyword">as.numeric</span>(KL(x))
+
+<span class="comment">#graph time!</span>
+<span class="function">ggplot</span>(x_data_2dist, <span class="keyword">aes</span>(x = 1:10, y = probability)) +
+  <span class="function">geom_line</span>(data = <span class="function">subset</span>(x_data_2dist, dist == <span class="string">"p"</span>),<span class="keyword">aes</span>(y=probability),color=<span class="string">"blue2"</span>)+
+  <span class="function">geom_line</span>(data = <span class="function">subset</span>(x_data_2dist, dist == <span class="string">"q"</span>),<span class="keyword">aes</span>(y=probability),color=<span class="string">"orange3"</span>)+
+  <span class="function">geom_area</span>(data = <span class="function">subset</span>(x_data_2dist, dist == <span class="string">"p"</span>), <span class="keyword">aes</span>(fill = <span class="string">"p"</span>), alpha = 0.5) +
+  <span class="function">geom_area</span>(data = <span class="function">subset</span>(x_data_2dist, dist == <span class="string">"q"</span>), <span class="keyword">aes</span>(fill = <span class="string">"q"</span>), alpha = 0.5) +
+  <span class="function">labs</span>(
+    title = <span class="string">"Differing Probability Distributions"</span>,
+    subtitle = <span class="function">paste</span>(<span class="string">"d_KL="</span>,<span class="function">round</span>(d_KL,5)),
+    x = <span class="string">"Row Index"</span>,
+    y = <span class="string">"Probability"</span>,
+    fill = <span class="string">"Distribution"</span>
+  ) +
+  <span class="function">scale_fill_manual</span>(values = c(<span class="string">"p"</span> = <span class="string">"blue"</span>, <span class="string">"q"</span> = <span class="string">"orange2"</span>))+
+  <span class="function">theme_minimal</span>()
+</code></pre>
+</body>
+</html>
