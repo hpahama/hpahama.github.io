@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Code Display</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+        pre {
+            background-color: #2e2e2e;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Displaying Python Code: Conway's Game of Life</h1>
+    <pre>
+import tkinter as tk
+import random
+import time
+
+class GameOfLife:
+    def __init__(self, master):
+        self.master = master
+        self.master.title("Conway's Game of Life")
+        
+        self.grid_size = 30
+        self.cell_size = 20
+        self.running = False
+        self.delay = 100
+        self.start_time = time.time()
+        
+        self.canvas = tk.Canvas(self.master, width=self.grid_size * self.cell_size, 
+                                height=self.grid_size * self.cell_size, bg="#F0F0F0")
+        self.canvas.grid(row=0, column=0, columnspan=4, padx=10, pady=10)
+
+        self.grid = [[0 for _ in range(self.grid_size)] for _ in range(self.grid_size)]
+        self.age = [[0 for _ in range(self.grid_size)] for _ in range(self.grid_size)]
+        
+        self.restart_button = tk.Button(self.master, text="Restart", command=self.restart_game,
+                                        relief="solid", bg="#FFB74D", fg="white", font=("Arial", 12, "bold"),
+                                        bd=2, highlightthickness=0)
+        self.restart_button.grid(row=1, column=0, padx=10, pady=5)
+
+        self.start_button = tk.Button(self.master, text="Play", command=self.toggle_simulation, 
+                                      relief="solid", bg="#FFB74D", fg="white", font=("Arial", 12, "bold"),
+                                      bd=2, highlightthickness=0)
+        self.start_button.grid(row=1, column=1, padx=10, pady=5)
+
+        self.slower_button = tk.Button(self.master, text="Slower", command=self.slower,
+                                       relief="solid", bg="#FF7043", fg="white", font=("Arial", 12, "bold"),
+                                       bd=2, highlightthickness=0)
+        self.slower_button.grid(row=1, column=2, padx=10, pady=5)
+
+        self.faster_button = tk.Button(self.master, text="Faster", command=self.faster,
+                                       relief="solid", bg="#4DB6AC", fg="white", font=("Arial", 12, "bold"),
+                                       bd=2, highlightthickness=0)
+        self.faster_button.grid(row=1, column=3, padx=10, pady=5)
+
+        self.note_label = tk.Label(self.master, text="Click anywhere on the grid to plant a living cell!", 
+                                   font=("Arial", 10, "italic"), bg="#F0F0F0", fg="#757575")
+        self.note_label.grid(row=2, column=0, columnspan=4, pady=5)
+
+        self.runtime_label = tk.Label(self.master, text="Run Time: 0.0s", font=("Arial", 10), bg="#F0F0F0")
+        self.runtime_label.grid(row=3, column=0, padx=10, pady=10)
+
+        self.active_cells_label = tk.Label(self.master, text="Active Cells: 0", font=("Arial", 10), bg="#F0F0F0")
+        self.active_cells_label.grid(row=3, column=1, padx=10, pady=10)
+        
+        self.generation_label = tk.Label(self.master, text="Generations: 0", font=("Arial", 10), bg="#F0F0F0")
+        self.generation_label.grid(row=3, column=2, padx=10, pady=10)
+
+        self.generation_history = []
+
+        self.randomize_grid()
+
+        self.canvas.bind("<Button-1>", self.plant_cell)
+
+        self.update_runtime()
+
+    def toggle_simulation(self):
+        if self.running:
+            self.running = False
+            self.start_button.config(text="Play")
+        else:
+            self.running = True
+            self.start_button.config(text="Pause")
+            self.run_simulation()
+
+    def randomize_grid(self):
+        for row in range(self.grid_size):
+            for col in range(self.grid_size):
+                self.grid[row][col] = random.choice([0, 1])
+        self.draw_grid()
+
+    def draw_grid(self):
+        self.canvas.delete("all")
+        self.cell_rectangles = {}
+        
+        for row in range(self.grid_size):
+            for col in range(self.grid_size):
+                if self.grid[row][col] == 1:
+                    age = self.age[row][col]
+                    if age == 1:
+                        shade = "#FFEB3B"
+                    elif age <= 3:
+                        shade = "#FFC107"
+                    else:
+                        shade = "#FF9800"
+                else:
+                    shade = "#616161"
+                    
+                rect = self.canvas.create_rectangle(col * self.cell_size, row * self.cell_size, 
+                                                     (col + 1) * self.cell_size, (row + 1) * self.cell_size, 
+                                                     fill=shade, outline="#1A237E")
+                self.cell_rectangles[(row, col)] = rect
+        
+        self.prev_state = [row[:] for row in self.grid]
+        self.update_counts()
+
+    def update_grid(self):
+        new_grid = [[0 for _ in range(self.grid_size)] for _ in range(self.grid_size)]
+        new_age = [[0 for _ in range(self.grid_size)] for _ in range(self.grid_size)]
+        
+        for row in range(self.grid_size):
+            for col in range(self.grid_size):
+                neighbors = self.count_neighbors(row, col)
+                if self.grid[row][col] == 1:
+                    if neighbors in [2, 3]:
+                        new_grid[row][col] = 1
+                        new_age[row][col] = self.age[row][col] + 1
+                    else:
+                        new_grid[row][col] = 0
+                        new_age[row][col] = 0
+                else:
+                    if neighbors == 3:
+                        new_grid[row][col] = 1
+                        new_age[row][col] = 1
+        
+        self.generation_history.append([row[:] for row in self.grid])
+        self.grid = new_grid
+        self.age = new_age
+        self.draw_grid()
+
+    def count_neighbors(self, row, col):
+        neighbors = 0
+        for i in range(-1, 2):
+            for j in range(-1, 2):
+                if i == 0 and j == 0:
+                    continue
+                r, c = row + i, col + j
+                if 0 <= r < self.grid_size and 0 <= c < self.grid_size:
+                    neighbors += self.grid[r][c]
+        return neighbors
+
+    def run_simulation(self):
+        if self.running:
+            self.update_grid()
+            self.master.after(self.delay, self.run_simulation)
+
+    def restart_game(self):
+        self.grid = [[0 for _ in range(self.grid_size)] for _ in range(self.grid_size)]
+        self.age = [[0 for _ in range(self.grid_size)] for _ in range(self.grid_size)]
+        self.generation_history.clear()
+        self.randomize_grid()
+        self.running = False
+        self.start_button.config(text="Start")
+
+    def faster(self):
+        if self.delay > 20:
+            self.delay -= 20
+
+    def slower(self):
+        self.delay += 20
+
+    def plant_cell(self, event):
+        col = event.x // self.cell_size
+        row = event.y // self.cell_size
+        if 0 <= row < self.grid_size and 0 <= col < self.grid_size:
+            self.grid[row][col] = 1
+            self.age[row][col] = 1
+            self.draw_grid()
+
+    def update_counts(self):
+        active_cells = sum(sum(1 for cell in row if cell == 1) for row in self.grid)
+        generations = len(self.generation_history)
+        
+        self.active_cells_label.config(text=f"Active Cells: {active_cells}")
+        self.generation_label.config(text=f"Generations: {generations}")
+        self.runtime_label.config(text=f"Run Time: {time.time() - self.start_time:.1f}s")
+    
+    def update_runtime(self):
+        self.runtime_label.after(100, self.update_runtime)
+
+root = tk.Tk()
+game = GameOfLife(root)
+root.mainloop()
+    </pre>
+</body>
+</html>
